@@ -5,7 +5,7 @@ const userRoutes = require('./routes/userRoutes');
 
 // Initialize express app
 const app = express();
-
+require('dotenv').config();
 // Connect to MongoDB
 connectDB();
 

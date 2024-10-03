@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
     try {
         // Replace '<your_mongodb_uri>' with the URI of your MongoDB database
-        const mongoURI = 'mongodb://127.0.0.1:27017/brainybeam';
+        const mongoURI = process.env.MONGO_URI;
 
         // Connect to MongoDB
         await mongoose.connect(mongoURI, {
