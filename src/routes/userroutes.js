@@ -2,7 +2,10 @@
 const express = require('express');
 const router = express.Router();
 const { authenticateToken, authorizeRole } = require('../middleware/authmiddle');
-const { login } = require('../controller/authcontroller');
+const { register, login } = require('../controller/authcontroller');
+
+//public register route
+router.post('/register, register')
 
 // Public login route
 router.post('/login', login);
