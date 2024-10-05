@@ -1,8 +1,8 @@
 // routes/userRoutes.js
 const express = require('express');
 const router = express.Router();
-const { authenticateToken, authorizeRole } = require('../middleware/authMiddleware');
-const { login } = require('../controllers/authController');
+const { authenticateToken, authorizeRole } = require('../middleware/authmiddle');
+const { login } = require('../controller/authcontroller');
 
 // Public login route
 router.post('/login', login);

@@ -1,12 +1,13 @@
 // middleware/authMiddleware.js
 const jwt = require('jsonwebtoken');
+require('dotenv').config();
 
 // Middleware to verify JWT and extract user role
 const authenticateToken = (req, res, next) => {
     const token = req.headers['authorization'];
     if (!token) return res.sendStatus(403);
 
-    jwt.verify(token, 'SECRET_KEY', (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
         if (err) return res.sendStatus(403);
         req.user = user;
         next();
