@@ -5,7 +5,7 @@ const { authenticateToken, authorizeRole } = require('../middleware/authmiddle')
 const { register, login } = require('../controller/authcontroller');
 
 //public register route
-router.post('/register, register')
+router.post('/register', register);
 
 // Public login route
 router.post('/login', login);
