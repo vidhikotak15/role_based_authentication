@@ -10,11 +10,6 @@ router.post('/register', register);
 // Public login route
 router.post('/login', login);
 
-// Public route
-router.get('/public', (req, res) => {
-    res.json({ message: 'This route is public!' });
-});
-
 // Protected route for admins only
 router.get('/admin', authenticateToken, authorizeRole(['admin']), (req, res) => {
     res.json({ message: 'This route is protected for admins!' });
