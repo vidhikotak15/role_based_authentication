@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
-const connectDB = require('./src/db/database_connect');
-const userRoutes = require('./src/routes/userroutes');
+const connectDB = require('./db/database_connect');
+const userRoutes = require('./routes/userroutes');
 
 // Initialize express app
 const app = express();
